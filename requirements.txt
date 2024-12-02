@@ -1,0 +1,7 @@
+Flask==2.3.3            # Flask for web application
+Flask-Mail==0.9.1       # Flask-Mail for sending emails
+Jinja2==3.1.2           # Template engine for Flask
+itsdangerous==2.1.2     # Required by Flask for cryptographic signing
+MarkupSafe==2.1.3       # Required by Flask for HTML escaping
+Werkzeug==2.3.6         # Required by Flask for WSGI utilities
+sqlite3==3.38.5         # Database connector for SQLite (included with Python, but specify version)

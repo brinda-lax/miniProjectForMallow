@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get User Purchase History</title>
+</head>
+<body>
+    <h1>View Purchase History</h1>
+    <form action="{{ url_for('get_user') }}" method="post">
+        <label for="user_name">Enter User Name:</label>
+        <input type="text" id="user_name" name="user_name" required>
+        <button type="submit">View Purchases</button>
+    </form>
+</body>
+</html>

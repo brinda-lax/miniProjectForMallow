@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Bill</title>
+</head>
+<body>
+    <h1>Bill Details</h1>
+    <p><strong>Total Amount:</strong> INR{{ total_amount }}</p>
+    <p><strong>Paid Amount:</strong> INR{{ paid_amount }}</p>
+    <p><strong>Balance:</strong> INR{{ balance }}</p>
+    <h3>Change Breakdown</h3>
+<ul>
+    {% if change %}
+        {% for denom, num in change.items() %}
+            <li>{{ num }} x INR{{ denom }} bills/coins</li>
+        {% endfor %}
+    {% else %}
+        <li>No change required.</li>
+    {% endif %}
+</ul>
+
+    <!-- Add other details like User, Product name, Quantity, etc. if needed -->
+    <p><a href="{{ url_for('home') }}">Go back to home</a></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Purchases</title>
+</head>
+<body>
+    <h1>Purchase History</h1>
+
+    <!-- Display User Name -->
+    <h2>User: {{ user_name }}</h2>
+
+    <table border="1">
+        <tr>
+            <th>Purchase ID</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+            <th>Total Amount</th>
+            <th>Paid Amount</th>
+            <th>Balance</th>
+            <th>Date</th>
+        </tr>
+        {% for purchase in purchases %}
+        <tr>
+            <td>{{ purchase['purchase_id'] }}</td>
+            <td>{{ purchase['product_name'] }}</td>
+            <td>{{ purchase['quantity'] }}</td>
+            <td>{{ purchase['sub_total'] }}</td>
+            <td>{{ purchase['total_amount'] }}</td>
+            <td>{{ purchase['paid_amount'] }}</td>
+            <td>{{ purchase['balance'] }}</td>
+            <td>{{ purchase['purchase_date'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('get_user') }}">Back</a>
+</body>
+</body>
+</html>
